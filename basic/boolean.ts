@@ -1,6 +1,6 @@
 let isDone: boolean = false
 
-isDone = true;
+isDone = true
 
 console.log(typeof isDone)
 
