@@ -21,3 +21,14 @@
 
 ## String
 - Template String 도 사용이 가능하다
+
+## Symbol
+- new 키워드를 이용해서 사용할 수는 없다
+- Symbol 을 함수로 사용해서 symbol 타입을 만들 수 있다
+```javascript
+console.log(Symbol('foo') === Symbol('foo'))
+```
+- symbol 을 사용하기 위해서는 tsconfig.json 파일을 수정해야 한다
+  - "lib": ["ES2015", "DOM"]
+- Prmitive 값을 사용하는데 고유하고 수정 불가능한 값으로 바꾼다
+- 보통 접근을 제어하는 데 사용한다.
