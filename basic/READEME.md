@@ -68,3 +68,5 @@ const samePerson = Object.create({name: 'Je', age: 10})
 
 ## Array
 - Object 의 일종이다.
+- Array 에서 조금 더 개선된 타입의 형태가 튜플
+  - 튜플은 순서마저 정해져 있다.
