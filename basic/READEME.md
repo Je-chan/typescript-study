@@ -64,3 +64,7 @@ const samePerson = Object.create({name: 'Je', age: 10})
 - object 라는 타입은 primitive 타입이 아닌 것을 나타내고 싶을 떄 사용한다
   - 즉 객체가 아니라 array 에도 적용될 수 있다. 
 - non-primitive type 의 경우 number, string, boolean, bigint, symbol, null, undefined 가 아니면 된다.
+
+
+## Array
+- Object 의 일종이다.
