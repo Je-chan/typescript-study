@@ -52,3 +52,15 @@ console.log(Symbol('foo') === Symbol('foo'))
 - 런타임에서 typeof 연산자를 이용해서 찾아보면 undefined 다.
 
 - undefined 와 null 에 대한 타입으로 정확하고 안전하게 코드를 작성할 수 있어야 한다.
+
+## Object 
+```javascript
+const person = {name: "Je", age: 10}
+const samePerson = Object.create({name: 'Je', age: 10})
+```
+- 첫 번째 person 은 name: string, age: number 가 나오지만
+- Objct.create 는 Primitive 타입이 아닌, Object 타입이거나 Null 인 것으로 타입을 정의한다.
+
+- object 라는 타입은 primitive 타입이 아닌 것을 나타내고 싶을 떄 사용한다
+  - 즉 객체가 아니라 array 에도 적용될 수 있다. 
+- non-primitive type 의 경우 number, string, boolean, bigint, symbol, null, undefined 가 아니면 된다.
