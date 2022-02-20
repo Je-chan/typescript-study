@@ -100,3 +100,7 @@ const samePerson = Object.create({name: 'Je', age: 10})
 - 보통은 return 에서 사용한다. 아무것도 return 되지 않는다는 의미
 - never 는 모든 타입의 sub type 이다. 그리고 모든 타입에 할당할 수 있다.
 - 단, never 에는 any 를 포함해서 모두 할당해줄 수 없다.
+
+## void
+- void 는 어떤 타입도 가지지 않는 빈 상태를 의미한다. 값은 없고 타입만 있어서 void 라는 값을 사용할 수는 없다.
+- 자바스크립트를 제외하고는 void 를 많이 사용하지만, 자바스크립트에서는 undefined 가 있어서 자주 사용하지는 않는다.
