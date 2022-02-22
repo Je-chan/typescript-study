@@ -22,3 +22,12 @@ npx tsc --init
 - type alias
 - class
 - 타입을 커스터마이징 해서 사용할 수 있다.
+
+
+# Structural VS Nominal
+### Structural
+- 구조가 같으면 같은 타입이다.
+- 타입스크립트
+### Nominal
+- 구조가 같아도 이름이 다르면 다른 타입이다
+- C 나 자바같은 것
