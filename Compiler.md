@@ -60,5 +60,50 @@ npm install --save-dev @tsconfig/deno
     - target 이 es5 이면 dom, es5, scripthost 
     - target 이 es6 이면 dom, es6, dom.literable, scripthost 를 사용한다
   - lib 를 지정하면 그 lib 배열로만 라이브러리를 사용한다.
- 
 
+## 3. strict
+- 작업을 할 때는 strict 를 항상 true 로 해줘야 한다
+- 엄격하게 타입을 확인하는 옵션을 활성화 한다는 것.
+  - noImplicitAny
+  - noImplicitThis
+  - strictNullChecks
+  - strictFunctionTypes
+  - strictPropertyInitialization
+  - strictBindCallApply
+  - alwaysStrict
+
+### noImplicityAny
+- any 를 명시적으로 사용하지 않으면 에러를 발생 시킨다.
+- 타입스크립트가 추론을 실패한 경우, any 가 맞으면 any 라고 지정하라고 한다.
+- 아무것도 쓰지 않으면 에러를 발생시킨다.
+
+### noImplcitThis
+- any 를 명시적으로 사용하지 않고 this 표현식에 사용하면 에러를 발생시킨다.
+- this 에 대해서 아무거나 들어갈 수 있다고 하는 것이 아니라 제한을 걸어주는 게 좋다
+- 첫 번째 매개변수 자리에 this 를 놓고, this 에 대한 타입을 아무것도 표현하지 않으면 noImplicitAny 가 오류를 발생시킨다
+- call, apply, bind 와 같이 this 를 대체하여 함수 콜을 하는 용도로 사용한다
+- this 를 any 라고 명시적으로 지정하는 것은 합리적이긴 하다.
+- Class 에서 thisㄹ를 사용하면 이 옵션과 관련된 에러는 당연하게도 나지 않는다.
+
+### strictNullChecks
+- 모든 타입에 null 과 undefined 가 포함된 상태로 사용하는 것
+- 한가지 예외로 undefined 에 void 를 할당할 수 있다
+- 만약 string 으로 타입을 지정해도, Null 이나 undefined 를 할당할 수 있다는 문제가 존재한다.
+- 만약 갖고 싶다면 union 타입을 사용해서 직접적으로 명시해야 한다.
+
+### strictFunctionTypes
+- 함수 타입에 대해서 bivariant 매개변수 검수를 비활성화 한다
+- 반환 타입은 공변적 (covariant)
+- 인자 타입은 반공변적(contravariant) 
+
+### strictPropertyInitialization
+- 정의되지 않은 클래스의 속성이 생성자에서 초기화됐는지 확인한다
+- 선언 됐지만 실질적으로 값이 할당되지 않았다고 에러를 내는 것
+
+### strictBindCallApplay
+- bind, call, apply 에 대한 더 엄격한 검사를 수행한다
+- bind 는 해당 함수 안에서 사용할 this 인자를 설정해주는 역할
+- call, apply 는 this 인자를 설정하고 실행까지 한다
+
+### alwaysStrict
+- 각 소스 파일에 대해 자바스크립트 strict 로 코드를 분석하고 엄격하게 사용을 해제한다.
