@@ -44,4 +44,21 @@ npm install --save-dev @tsconfig/deno
   - types 를 사용하면 배열 안의 모듈 혹은, ./node_modules/@types 안의 모듈 이름에서 찾아온다
   - typeRoots 와 types 는 같이 사용하지 않는다.
 
+## 2. target, lib
+- target
+  - JavaScript 의 버전을 세팅한다.
+  - 따로 지정을 하지 않으면 ES3 
+  - ES5, ES6, ES2015 ~ ES2020 등이 존재한다.
+  - 즉 빌드의 결과물을 어떤 버전으로 할 것인지를 지정한다
+
+- lib
+  - 타입스크립트가 설치될 때 타겟의 런타임을 설명할 번들된 선언적 파일이 기본적으로 존재한다.
+  - 타입스크립트에서는 여러 가지를 자세히 설정하기 불편해서 target 에 따라서 lib 이 자동으로 설정된다.
+  - 기본 type definition 라이브러리를 지정하는 것
+  - lib 를 지정하지 않았을 때
+    - target 이 es3 이면 lib.d.ts
+    - target 이 es5 이면 dom, es5, scripthost 
+    - target 이 es6 이면 dom, es6, dom.literable, scripthost 를 사용한다
+  - lib 를 지정하면 그 lib 배열로만 라이브러리를 사용한다.
+ 
 
