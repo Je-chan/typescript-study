@@ -13,8 +13,11 @@ hello2({name: "Je", age: 39})
 hello2({name: "Liebe"})
 
 interface Person3 {
-  name: string,
-  age? : number,
+  name: string;
+  age? : number;
+  // 아래 코드의 의미는 key 값으로 올 값이 뭐든 상관 없다는 것
+  // 위의 코드들은 반드시 key 가 name, age 로 한정돼야 하지만
+  // 아래의 코드는 타입이 String 이기만 하면 뭐든 다 된다는 의미다
   [key: string]: any;
 }
 
