@@ -19,3 +19,4 @@ class Person implements IPerson1 {
 
 const personClass: IPerson1 = new Person('Je')
 personClass.hello()
+
