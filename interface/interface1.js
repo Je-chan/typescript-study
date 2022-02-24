@@ -11,4 +11,8 @@ const p1 = {
     name: "JE",
     age: 39
 };
+
+// interface 와 관련된 내용은 일절 없다.
+// 오직 ts 에서만 필요한 것.
+
 hello1(p1);

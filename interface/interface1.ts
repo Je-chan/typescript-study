@@ -10,6 +10,7 @@
 //   age: 39
 // }
 
+// 인터페이스는 오직 ts 에서만 필요로 한다.
 interface Person1 {
   name: string;
   age: number
